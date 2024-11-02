@@ -17,7 +17,6 @@ const themeSwitcher = document.querySelector(".theme-switcher")
 fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
   .then((res) => res.json())
   .then(([country]) => {
-    // console.log(country.borders);
     flagImage.src = country.flags.svg;
 
     countryNameH1.innerText = country.name.common;
